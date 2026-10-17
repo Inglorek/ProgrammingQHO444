@@ -1,8 +1,15 @@
-# Ask user for name
-print("What is your name?")
+# Read in data
+print("Please enter number of lives")
+lives = int(input())
 
-# Read user's response
-name = input()
+print("Please enter energy level")
+energy = int(input())
 
-# Display confirmation message
-print(f"Nice to meet you {name}")
+print("Please enter shield level")
+shield = int(input())
+
+# Display bot data
+print(f"Lives:  {'♥' * lives}")
+print(f"Energy: {'♦' * energy}")
+print(f"Shield: {'♦' * shield}")
+
