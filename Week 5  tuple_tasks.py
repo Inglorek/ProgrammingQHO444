@@ -9,8 +9,8 @@ def run_task1():
     print(f"Minimum likelihood of falling: {min_likelihood}%")
 
 
-if __name__ == "__main__":
-    run_task1()
+
+
 
 def likelihood_min_max():
     # Likelihood of each step falling
@@ -22,8 +22,8 @@ def run_task2():
     print(f"Minimum likelihood of falling: {likelihood_values[0]}%")
     print(f"Maximum likelihood of falling: {likelihood_values[1]}%")
 
-if __name__ == "__main__":
-    run_task2()
+
+
 
 def steps():
     # Store step names and their likelihood of falling
@@ -34,3 +34,27 @@ def steps():
         ("step 4", 99),
         ("step 5", 4)
     ]
+
+
+    return likelihoods
+
+def run_task3():
+    all_steps = steps()
+
+    good_steps = []
+    bad_steps = []
+
+    for step in all_steps:
+        if step[1] >= 50:
+            bad_steps.append(step)
+        else:
+            good_steps.append(step)
+
+    print(f"Good steps: {len(good_steps)}, Bad steps: {len(bad_steps)}")
+
+
+
+if __name__ == "__main__":
+    run_task1()
+    run_task2()
+    run_task3()
